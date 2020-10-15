@@ -1,0 +1,31 @@
+{%extends 'base.html'%} {%load static%}{% block body %}
+<div class="container mt-5">
+
+
+    <div class="row">
+        {% for e in product%}
+        <div class="col-md-3">
+            <figure class="card card-product">
+                <div class="img-wrap">
+                    <img width="208" height="270" src="{{e.images.url}}">
+                    <a class="btn-overlay" href="/productview/{{e.product_name}}"><i class="fa fa-search-plus"></i> Quick view</a>
+                </div>
+                <figcaption class="info-wrap">
+                    <h6 class="title text-dots"><a href="#">{{e.product_name}}</a></h6>
+
+                    <div class="action-wrap">
+                        <a href="/order" class="btn btn-primary btn-sm float-right"> Order </a>
+                        <div class="price-wrap h5">
+                            <span class="price-new">${{e.price}}</span>
+                            <del class="price-old"></del>
+                        </div>
+                        <!-- price-wrap.// -->
+                    </div>
+                    <!-- action-wrap -->
+                </figcaption>
+            </figure>
+            <!-- card // -->
+        </div>
+        <!-- col // -->
+
+        {% endfor %} {% endblock %}
