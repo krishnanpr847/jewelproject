@@ -24,22 +24,6 @@ def tracker_view(request):
 def search_view(request):
     return render(request,'search.html')
 
-def whatsapp_view(request):
-     
- 
-    account_sid = 'AC8ac73a53275da3e4932b03796c272550' 
-    auth_token = '6e06ecd2242243e2a8e7701251bb81bc' 
-    client = Client(account_sid, auth_token) 
- 
-    message = client.messages.create( 
-                              from_='whatsapp:+14155238886',  
-                              body='deii krish',      
-                              to='whatsapp:+918675111847' 
-                          ) 
- 
-    print(message.sid)
-    
-    return render(request,'whatsapp.html')
 
 def productview_view(request,product_name):
     #post=get_object_or_404(Post,product_name=product_name)
