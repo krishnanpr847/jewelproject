@@ -29,7 +29,7 @@ urlpatterns = [
     path('silver/',views.silver_view,name='silver'),
     path('',views.index_view,name='index'),
     path('order/',views.order_view,name='order'),
-    path('whatsapp/',views.whatsapp_view,name='whatsapp'),
+
     path('tracker/',views.tracker_view,name='tracker'),
     path('search/',views.search_view,name='search'),
     #path('<slug:slug>/', views.productview_view, name='post_detail'),
